@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Covid Tracker GoAcademy</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="_86521">86521</string>
+    <string name="information">Information</string>
+    <string name="red_covid">Red Covid</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="_36977">36977</string>
+    <string name="positive">Positive</string>
+    <string name="_45401">45401</string>
+    <string name="recovered">Recovered</string>
+    <string name="_4143">4143</string>
+    <string name="death">Death</string>
+    <string name="get_to_know_more">Get to know more</string>
+    <string name="global_map">Global Map</string>
+    <string name="look_up">Look Up</string>
+    <string name="see_details_by_province_all_over_indonesia">See details by province all\nover Indonesia</string>
+    <string name="right_arrow">Right Arrow</string>
+    <string name="siren">Siren</string>
+    <string name="hot_line">Hotline</string>
+    <string name="check_emergency_number_to_contact">Check emergency number\nto contact</string>
 </resources>
