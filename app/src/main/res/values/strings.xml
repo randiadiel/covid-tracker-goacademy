@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Covid Tracker GoAcademy</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="confirmedCases">Confirmed</string>
+    <string name="recoveredCases">Recovered</string>
+    <string name="deathCases">Death</string>
+    <string name="totalCases">Total Cases</string>
 </resources>
