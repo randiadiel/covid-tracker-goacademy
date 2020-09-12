@@ -2,9 +2,9 @@ package com.example.covidtrackergoacademy
 
 data class MainActivityData (
     val name: String,
-    val positiveCases: Int,
-    val recoveredCases: Int,
-    val deathCases: Int,
-    val hospitalizedCases: Int
+    val positiveCases: String,
+    val recoveredCases: String,
+    val deathCases: String,
+    val hospitalizedCases: String
 
 )
