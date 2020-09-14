@@ -10,7 +10,5 @@ class HotlineViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     fun bind(data: HotlineData){
         // itemView.tv_look_up_province_name.text = data.provinceName
         itemView.tv_look_up_province_name.text = data.name
-        
-        Picasso.get().load(data.imgIcon).into(itemView.)
     }
 }
