@@ -39,31 +39,39 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_main_heading"
         app:srcCompat="@drawable/virus" />
 
-    <TextView
-        android:id="@+id/tv_main_total_cases"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        tools:text="78754"
-        android:fontFamily="@font/rubik_bold"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        android:textStyle="bold"
+        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_main_virus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_main_heading" />
+        app:layout_constraintStart_toEndOf="@id/iv_main_virus"
+        app:layout_constraintTop_toTopOf="@id/iv_main_virus">
 
-    <TextView
-        android:id="@+id/tv_main_case_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/totalCases"
-        android:textColor="@color/white"
-        android:fontFamily="@font/karla"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_main_total_cases"
-        app:layout_constraintStart_toStartOf="@+id/tv_main_total_cases"
-        app:layout_constraintTop_toBottomOf="@+id/tv_main_total_cases" />
+
+        <TextView
+            android:id="@+id/tv_main_total_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="000,000"
+            android:textColor="#FFFFFF"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_main_case_description"/>
+
+        <TextView
+            android:id="@+id/tv_main_case_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/totalCases"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_main_total_cases"
+            app:layout_constraintStart_toStartOf="@+id/tv_main_total_cases"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_main_bottom"
@@ -95,7 +103,7 @@
                 tools:text="36977"
                 android:fontFamily="@font/rubik_bold"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/guideline_confirmed"/>
@@ -135,7 +143,7 @@
                 android:layout_height="wrap_content"
                 tools:text="45401"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/rubik_bold"
                 app:layout_constraintBottom_toTopOf="@id/guideline_recovered"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -173,7 +181,7 @@
                 android:layout_height="wrap_content"
                 tools:text="4143"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/rubik_bold"
                 app:layout_constraintBottom_toTopOf="@id/guideline_death"
                 app:layout_constraintEnd_toEndOf="parent"
