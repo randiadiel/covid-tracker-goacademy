@@ -3,16 +3,8 @@ package com.example.covidtrackergoacademy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.covidtrackergoacademy.hotline.adapter.HotlineAdapter
-import com.example.covidtrackergoacademy.hotline.HotlineData
-import com.example.covidtrackergoacademy.lookup.viewmodel.LookUpActivity
-import kotlinx.android.synthetic.main.activity_look_up.*
+import com.example.covidtrackergoacademy.lookup.activity.LookUpActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import okhttp3.*
-import org.json.JSONArray
-import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 //    private val okHttpClient = OkHttpClient()
