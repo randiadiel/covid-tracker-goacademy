@@ -7,10 +7,11 @@ interface MainContract {
     interface View {
         fun updateData(data : MainActivityData)
         fun showError(error: String)
+        fun invisibleLoader()
     }
     interface Presenter {
         fun getData(context: Activity)
-        fun invisibleLoader(context: Activity)
         fun aboutDialogCall(context: Activity)
+        fun lookupIntent(context: Activity)
     }
 }

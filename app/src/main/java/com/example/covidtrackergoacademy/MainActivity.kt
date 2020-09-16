@@ -1,7 +1,9 @@
-package com.example.covidtrackergoacademy.main.ui
+package com.example.covidtrackergoacademy
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.example.covidtrackergoacademy.main.data.MainActivityData
 import com.example.covidtrackergoacademy.R
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         setContentView(R.layout.activity_main)
         presenter.getData(this)
         presenter.aboutDialogCall(this)
+        presenter.lookupIntent(this)
     }
 
     override fun updateData(data: MainActivityData) {
@@ -34,6 +37,15 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     override fun showError(error: String) {
         runOnUiThread(){
             Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun invisibleLoader() {
+        runOnUiThread(){
+            pr_confirmed.visibility = View.INVISIBLE
+            pr_recovered.visibility = View.INVISIBLE
+            pr_death.visibility = View.INVISIBLE
+            pr_total.visibility = View.INVISIBLE
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.example.covidtrackergoacademy.main.presenter
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.example.covidtrackergoacademy.main.data.MainActivityData
 import com.example.covidtrackergoacademy.R
+import com.example.covidtrackergoacademy.lookup.ui.LookUpActivity
 import com.example.covidtrackergoacademy.main.model.Model
 import kotlinx.android.synthetic.main.about_dialog.view.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -38,7 +40,7 @@ class MainPresenter(val model: Model, val view: MainContract.View) : MainContrac
                                 deathCases = jsonArray.getJSONObject(i).getString("meninggal"),
                                 hospitalizedCases = jsonArray.getJSONObject(i).getString("dirawat")
                             )
-                        invisibleLoader(context)
+                        view.invisibleLoader()
                         view.updateData(data)
                     }
                 } catch (e: Exception) {
@@ -47,13 +49,6 @@ class MainPresenter(val model: Model, val view: MainContract.View) : MainContrac
             }
 
         })
-    }
-
-    override fun invisibleLoader(context: Activity) {
-        context.pr_confirmed.visibility = View.INVISIBLE
-        context.pr_recovered.visibility = View.INVISIBLE
-        context.pr_death.visibility = View.INVISIBLE
-        context.pr_total.visibility = View.INVISIBLE
     }
 
     override fun aboutDialogCall(context: Activity) {
@@ -66,6 +61,13 @@ class MainPresenter(val model: Model, val view: MainContract.View) : MainContrac
             aboutDialog.btn_about_cancel.setOnClickListener{
                 alertDialog.dismiss()
             }
+        }
+    }
+
+    override fun lookupIntent(context: Activity) {
+        context.cl_main_lookup.setOnClickListener {
+            val intent = Intent(context, LookUpActivity::class.java)
+            context.startActivity(intent)
         }
     }
 
