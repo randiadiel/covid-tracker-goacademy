@@ -49,6 +49,14 @@
         app:layout_constraintTop_toTopOf="@id/iv_main_virus">
 
 
+        <ProgressBar
+            android:id="@+id/pr_total"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateDrawable="@drawable/progress"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_main_total_cases"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
         <TextView
             android:id="@+id/tv_main_total_cases"
             android:layout_width="wrap_content"
@@ -96,6 +104,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <ProgressBar
+                android:id="@+id/pr_confirmed"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:indeterminateDrawable="@drawable/progress"
+                app:layout_constraintBottom_toTopOf="@+id/tv_main_positive"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/tv_main_confirmed_cases"
                 android:layout_width="wrap_content"
@@ -137,6 +154,14 @@
             app:layout_constraintStart_toEndOf="@+id/cl_main_confirmed"
             app:layout_constraintTop_toTopOf="parent">
 
+            <ProgressBar
+                android:id="@+id/pr_recovered"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:indeterminateDrawable="@drawable/progress"
+                app:layout_constraintBottom_toTopOf="@+id/tv_main_recovered"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/tv_main_recovered_cases"
                 android:layout_width="wrap_content"
@@ -175,6 +200,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <ProgressBar
+                android:id="@+id/pr_death"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:indeterminateDrawable="@drawable/progress"
+                app:layout_constraintBottom_toTopOf="@+id/tv_main_death"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/tv_main_death_cases"
                 android:layout_width="wrap_content"
