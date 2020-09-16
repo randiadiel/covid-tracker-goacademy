@@ -16,4 +16,7 @@
     <string name="hotline_image">Hotline Image</string>
     <string name="hotline_heading">Hotline</string>
     <string name="hotline_description">See details by province all over indonesia</string>
+    <string name="information">Information</string>
+    <string name="red_covid">Red Covid</string>
+    <string name="right_arrow">Right Arrow</string>
 </resources>
