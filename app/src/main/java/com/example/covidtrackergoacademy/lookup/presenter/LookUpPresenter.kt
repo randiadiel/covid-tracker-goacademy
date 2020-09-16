@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy.lookup.mvp
+package com.example.covidtrackergoacademy.lookup.presenter
 
 import android.app.Activity
 import android.text.Editable
@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covidtrackergoacademy.lookup.data.LookUpData
 import com.example.covidtrackergoacademy.lookup.adapter.LookUpAdapter
+import com.example.covidtrackergoacademy.lookup.model.LookUpModel
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.Response
@@ -16,7 +17,8 @@ import org.json.JSONArray
 import java.io.IOException
 import java.util.*
 
-class LookUpPresenter(private val model : LookUpModel, val view : LookUpContract.View) : LookUpContract.Presenter {
+class LookUpPresenter(private val model : LookUpModel, val view : LookUpContract.View) :
+    LookUpContract.Presenter {
 
     private val mockLookUpList = mutableListOf(
         LookUpData("Loading...", 0, 0, 0)

@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.example.covidtrackergoacademy.MainActivityData
 import com.example.covidtrackergoacademy.R
+import com.example.covidtrackergoacademy.main.model.Model
 import kotlinx.android.synthetic.main.about_dialog.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.Call

@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy.lookup.activity
+package com.example.covidtrackergoacademy.lookup.ui
 
 import android.os.Bundle
 import android.widget.Toast
@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covidtrackergoacademy.R
 import com.example.covidtrackergoacademy.lookup.data.LookUpData
 import com.example.covidtrackergoacademy.lookup.adapter.LookUpAdapter
-import com.example.covidtrackergoacademy.lookup.mvp.LookUpContract
-import com.example.covidtrackergoacademy.lookup.mvp.LookUpModel
-import com.example.covidtrackergoacademy.lookup.mvp.LookUpPresenter
+import com.example.covidtrackergoacademy.lookup.presenter.LookUpContract
+import com.example.covidtrackergoacademy.lookup.model.LookUpModel
+import com.example.covidtrackergoacademy.lookup.presenter.LookUpPresenter
 import kotlinx.android.synthetic.main.activity_look_up.*
 
 class LookUpActivity : AppCompatActivity(), LookUpContract.View {

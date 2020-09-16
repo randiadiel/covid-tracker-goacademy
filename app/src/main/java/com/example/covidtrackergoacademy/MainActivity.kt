@@ -1,12 +1,11 @@
 package com.example.covidtrackergoacademy
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.covidtrackergoacademy.main.MainContract
 import com.example.covidtrackergoacademy.main.MainPresenter
-import com.example.covidtrackergoacademy.main.Model
+import com.example.covidtrackergoacademy.main.model.Model
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainContract.View {

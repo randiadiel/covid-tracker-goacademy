@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy.main
+package com.example.covidtrackergoacademy.main.model
 
 import okhttp3.Callback
 import okhttp3.OkHttpClient
