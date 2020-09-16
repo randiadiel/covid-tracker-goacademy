@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy.main
+package com.example.covidtrackergoacademy.main.presenter
 
 import android.app.Activity
 import android.graphics.Color
@@ -6,7 +6,7 @@ import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import com.example.covidtrackergoacademy.MainActivityData
+import com.example.covidtrackergoacademy.main.data.MainActivityData
 import com.example.covidtrackergoacademy.R
 import com.example.covidtrackergoacademy.main.model.Model
 import kotlinx.android.synthetic.main.about_dialog.view.*

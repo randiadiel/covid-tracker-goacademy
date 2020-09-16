@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy
+package com.example.covidtrackergoacademy.main.data
 
 data class MainActivityData (
     val name: String,

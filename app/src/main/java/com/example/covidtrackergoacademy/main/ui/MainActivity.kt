@@ -1,10 +1,12 @@
-package com.example.covidtrackergoacademy
+package com.example.covidtrackergoacademy.main.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.covidtrackergoacademy.main.MainContract
-import com.example.covidtrackergoacademy.main.MainPresenter
+import com.example.covidtrackergoacademy.main.data.MainActivityData
+import com.example.covidtrackergoacademy.R
+import com.example.covidtrackergoacademy.main.presenter.MainContract
+import com.example.covidtrackergoacademy.main.presenter.MainPresenter
 import com.example.covidtrackergoacademy.main.model.Model
 import kotlinx.android.synthetic.main.activity_main.*
 
