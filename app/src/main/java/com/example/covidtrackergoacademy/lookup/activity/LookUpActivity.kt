@@ -14,14 +14,6 @@ import kotlinx.android.synthetic.main.activity_look_up.*
 
 class LookUpActivity : AppCompatActivity(), LookUpContract.View {
 
-    private val mockLookUpList = mutableListOf(
-        LookUpData("Loading...", 0, 0, 0)
-    )
-
-    private val filteredList = mutableListOf(
-        LookUpData("Loading...", 0, 0, 0)
-    )
-
     private val presenter : LookUpContract.Presenter = LookUpPresenter(LookUpModel(), this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +26,11 @@ class LookUpActivity : AppCompatActivity(), LookUpContract.View {
 
     override fun updateData(data: MutableList<LookUpData>) {
         runOnUiThread {
-            val lookUpAdapter = LookUpAdapter(mockLookUpList)
+            val lookUpAdapter = LookUpAdapter(data)
 
             rv_look_up.layoutManager = LinearLayoutManager(this)
             rv_look_up.adapter = lookUpAdapter
 
-            lookUpAdapter.updateData(data)
         }
     }
 
