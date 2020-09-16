@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covidtrackergoacademy.R
-import com.example.covidtrackergoacademy.lookup.LookUpData
+import com.example.covidtrackergoacademy.lookup.data.LookUpData
 
 class LookUpAdapter(private val LookUpList: MutableList<LookUpData>) : RecyclerView.Adapter<LookUpViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LookUpViewHolder {
