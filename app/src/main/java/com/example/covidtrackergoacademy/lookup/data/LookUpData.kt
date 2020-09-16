@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy.lookup
+package com.example.covidtrackergoacademy.lookup.data
 
 data class LookUpData(
     val provinceName: String,

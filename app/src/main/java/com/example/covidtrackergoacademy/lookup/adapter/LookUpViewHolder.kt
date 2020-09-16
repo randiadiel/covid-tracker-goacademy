@@ -2,7 +2,7 @@ package com.example.covidtrackergoacademy.lookup.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.covidtrackergoacademy.lookup.LookUpData
+import com.example.covidtrackergoacademy.lookup.data.LookUpData
 import kotlinx.android.synthetic.main.item_look_up.view.*
 
 class LookUpViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
