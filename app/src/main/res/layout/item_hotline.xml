@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="16dp"
     app:cardElevation="16dp"
-    android:layout_marginHorizontal="28dp"
+    android:layout_marginHorizontal="24dp"
     android:layout_marginVertical="8dp"
     >
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,11 +20,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
+            android:fontFamily="@font/rubik_bold"
+            android:textColor="@color/indigo"
             app:layout_constraintStart_toEndOf="@+id/iv_item_hotline_image"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="DKI Jakarta" />
+            tools:text="0815112122" />
 
         <TextView
             android:id="@+id/tv_item_hotline_name"
@@ -43,6 +45,15 @@
             android:src="@drawable/progress"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_item_hotline_call"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_telephone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

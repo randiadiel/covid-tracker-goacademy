@@ -31,7 +31,7 @@
             android:id="@+id/teal_circle"
             android:layout_width="80sp"
             android:layout_height="80sp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/teal_circle"
             android:gravity="center"
             android:orientation="vertical"
@@ -44,9 +44,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_bold"
-                android:text="18308"
                 android:textColor="@color/white"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                tools:text="18308" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -54,30 +54,30 @@
                 android:fontFamily="@font/karla_regular"
                 android:text="Positive"
                 android:textColor="@color/white"
-                android:textSize="11sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
         <LinearLayout
-        android:id="@+id/green_circle"
-        android:layout_width="80sp"
-        android:layout_height="80sp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/green_circle"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_look_up_province_name">
+            android:id="@+id/green_circle"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/green_circle"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_look_up_province_name">
 
             <TextView
                 android:id="@+id/tv_look_up_recovered_case"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_bold"
-                android:text="9342"
                 android:textColor="@color/white"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                tools:text="9342" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
                 android:fontFamily="@font/karla_regular"
                 android:text="Recovered"
                 android:textColor="@color/white"
-                android:textSize="11sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -93,7 +93,7 @@
             android:id="@+id/red_circle"
             android:layout_width="80sp"
             android:layout_height="80sp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/red_circle"
             android:gravity="center"
             android:orientation="vertical"
@@ -106,9 +106,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_bold"
-                android:text="1401"
                 android:textColor="@color/white"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                tools:text="1401" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -116,7 +116,7 @@
                 android:fontFamily="@font/karla_regular"
                 android:text="Death"
                 android:textColor="@color/white"
-                android:textSize="11sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
