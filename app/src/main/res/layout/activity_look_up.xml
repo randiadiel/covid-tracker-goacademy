@@ -48,26 +48,34 @@
         android:id="@+id/cl_search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="16dp"
         android:background="@drawable/off_white_rounded_bg"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll_horizontal_line">
 
+        <ImageView
+            android:id="@+id/iv_look_up_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <EditText
             android:id="@+id/et_look_up"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginRight="32dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
             android:background="@color/off_white"
             android:hint="Search province..."
             android:inputType="text"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toEndOf="@id/iv_look_up_search" />
 
         <ImageButton
             android:id="@+id/ib_cancel"

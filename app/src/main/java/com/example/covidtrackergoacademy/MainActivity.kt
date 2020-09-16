@@ -1,12 +1,10 @@
 package com.example.covidtrackergoacademy
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.example.covidtrackergoacademy.main.data.MainActivityData
-import com.example.covidtrackergoacademy.R
 import com.example.covidtrackergoacademy.main.presenter.MainContract
 import com.example.covidtrackergoacademy.main.presenter.MainPresenter
 import com.example.covidtrackergoacademy.main.model.Model
