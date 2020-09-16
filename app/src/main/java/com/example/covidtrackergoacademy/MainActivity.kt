@@ -1,11 +1,16 @@
 package com.example.covidtrackergoacademy
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.covidtrackergoacademy.main.MainContract
 import com.example.covidtrackergoacademy.main.MainPresenter
 import com.example.covidtrackergoacademy.main.Model
+import kotlinx.android.synthetic.main.about_dialog.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainContract.View {
@@ -20,12 +25,23 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         presenter.getData()
+        btn_main_info.setOnClickListener {
+            val aboutDialog = LayoutInflater.from(this).inflate(R.layout.about_dialog, null)
+            val builder = AlertDialog.Builder(this)
+                .setView(aboutDialog)
+            val alertDialog = builder.show()
+            alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            aboutDialog.btn_about_cancel.setOnClickListener{
+                alertDialog.dismiss()
+            }
+        }
     }
 
     override fun updateData(data: MainActivityData) {
         runOnUiThread(){
             tv_main_heading.text = data.name
-            tv_main_confirmed_cases.text = data.positiveCases
+            tv_main_total_cases.text = data.positiveCases
+            tv_main_confirmed_cases.text = data.hospitalizedCases
             tv_main_recovered_cases.text = data.recoveredCases
             tv_main_death_cases.text = data.deathCases
         }

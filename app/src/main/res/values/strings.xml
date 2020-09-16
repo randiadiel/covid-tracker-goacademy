@@ -5,4 +5,7 @@
     <string name="recoveredCases">Recovered</string>
     <string name="deathCases">Death</string>
     <string name="totalCases">Total Cases</string>
+    <string name="app_version">v1.0.0</string>
+    <string name="made_by"><![CDATA[Made with <3 at BNCC Academy x GoAcademy by Daniel, Dennis, Randi, Ricco, Stacia.]]></string>
+    <string name="about_thanks">Special thanks to our amazing coaches from GoAcademy.</string>
 </resources>

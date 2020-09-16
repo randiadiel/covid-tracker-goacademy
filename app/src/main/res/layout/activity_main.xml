@@ -19,13 +19,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/iv_main_info"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+    <Button
+        android:id="@+id/btn_main_info"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:src="@mipmap/ic_launcher"
+        android:background="@drawable/information_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -248,7 +248,7 @@
                 android:text="Look up"
                 android:fontFamily="@font/rubik_bold"
                 android:textColor="@color/indigo"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/iv_main_lookup"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -302,7 +302,7 @@
                 android:layout_marginStart="16dp"
                 android:text="Hotline"
                 android:textColor="@color/indigo"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:fontFamily="@font/rubik_bold"
                 app:layout_constraintStart_toEndOf="@+id/iv_main_hotline"
                 app:layout_constraintTop_toTopOf="parent" />
