@@ -1,7 +1,7 @@
-package com.example.covidtrackergoacademy.main
+package com.example.covidtrackergoacademy.main.presenter
 
 import android.app.Activity
-import com.example.covidtrackergoacademy.MainActivityData
+import com.example.covidtrackergoacademy.main.data.MainActivityData
 
 interface MainContract {
     interface View {
