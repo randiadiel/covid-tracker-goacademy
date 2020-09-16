@@ -3,7 +3,7 @@ package com.example.covidtrackergoacademy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.covidtrackergoacademy.lookup.activity.LookUpActivity
+import com.example.covidtrackergoacademy.lookup.ui.LookUpActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

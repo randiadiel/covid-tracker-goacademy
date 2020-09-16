@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy.lookup.mvp
+package com.example.covidtrackergoacademy.lookup.model
 
 import okhttp3.Callback
 import okhttp3.OkHttpClient

@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy.lookup.mvp
+package com.example.covidtrackergoacademy.lookup.presenter
 
 import android.app.Activity
 import android.widget.EditText
