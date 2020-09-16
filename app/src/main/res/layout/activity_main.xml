@@ -37,7 +37,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_main_heading"
-        app:srcCompat="@drawable/virus" />
+        app:srcCompat="@drawable/virus"
+        android:contentDescription="@string/info_button" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -100,7 +101,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:background="@drawable/all_rounded"
-            android:backgroundTint="#52B2D0"
+            android:backgroundTint="@color/teal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -149,7 +150,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:background="@drawable/all_rounded"
-            android:backgroundTint="#68C166"
+            android:backgroundTint="@color/green"
             app:layout_constraintEnd_toStartOf="@+id/cl_main_death"
             app:layout_constraintStart_toEndOf="@+id/cl_main_confirmed"
             app:layout_constraintTop_toTopOf="parent">
@@ -196,7 +197,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:background="@drawable/all_rounded"
-            android:backgroundTint="#E76666"
+            android:backgroundTint="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -244,7 +245,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Get to know more"
+            android:text="@string/main_subheading"
             android:fontFamily="@font/rubik_bold"
             android:textSize="25sp"
             android:textColor="@color/indigo"
@@ -265,20 +266,21 @@
 
             <ImageView
                 android:id="@+id/iv_main_lookup"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/global_map"
-                tools:src="@drawable/virus" />
+                tools:src="@drawable/virus"
+                android:contentDescription="@string/global_map" />
 
             <TextView
                 android:id="@+id/tv_main_lookupTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Look up"
+                android:text="@string/look_up"
                 android:fontFamily="@font/rubik_bold"
                 android:textColor="@color/indigo"
                 android:textSize="20sp"
@@ -289,7 +291,7 @@
                 android:id="@+id/tv_main_lookupDesc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="See details by province all over indonesia"
+                android:text="@string/look_up_description"
                 android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toStartOf="@+id/btn_main_lookup"
                 app:layout_constraintStart_toStartOf="@+id/tv_main_lookupTitle"
@@ -320,20 +322,21 @@
 
             <ImageView
                 android:id="@+id/iv_main_hotline"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/siren"
-                tools:src="@drawable/virus" />
+                tools:src="@drawable/virus"
+                android:contentDescription="@string/hotline_image" />
 
             <TextView
                 android:id="@+id/tv_main_hotline_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Hotline"
+                android:text="@string/hotline_heading"
                 android:textColor="@color/indigo"
                 android:textSize="20sp"
                 android:fontFamily="@font/rubik_bold"
@@ -344,7 +347,7 @@
                 android:id="@+id/tv_main_hotline_desc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="See details by province all over indonesia"
+                android:text="@string/hotline_description"
                 android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toStartOf="@+id/btn_main_hotline"
                 app:layout_constraintStart_toStartOf="@+id/tv_main_hotline_title"

@@ -8,4 +8,12 @@
     <string name="app_version">v1.0.0</string>
     <string name="made_by"><![CDATA[Made with <3 at BNCC Academy x GoAcademy by Daniel, Dennis, Randi, Ricco, Stacia.]]></string>
     <string name="about_thanks">Special thanks to our amazing coaches from GoAcademy.</string>
+    <string name="info_button">Info Button</string>
+    <string name="main_subheading">Get to know more</string>
+    <string name="global_map">Global Map</string>
+    <string name="look_up">Look up</string>
+    <string name="look_up_description">See details by province all over indonesia</string>
+    <string name="hotline_image">Hotline Image</string>
+    <string name="hotline_heading">Hotline</string>
+    <string name="hotline_description">See details by province all over indonesia</string>
 </resources>
