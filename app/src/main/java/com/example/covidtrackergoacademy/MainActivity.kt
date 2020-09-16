@@ -4,15 +4,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.covidtrackergoacademy.hotline.adapter.HotlineAdapter
+import com.example.covidtrackergoacademy.hotline.data.HotlineData
+import com.example.covidtrackergoacademy.hotline.model.HotlineModel
+import com.example.covidtrackergoacademy.hotline.presenter.HotlineContract
+import com.example.covidtrackergoacademy.hotline.presenter.HotlinePresenter
+import com.example.covidtrackergoacademy.lookup.adapter.LookUpAdapter
 import com.example.covidtrackergoacademy.main.data.MainActivityData
 import com.example.covidtrackergoacademy.main.presenter.MainContract
 import com.example.covidtrackergoacademy.main.presenter.MainPresenter
 import com.example.covidtrackergoacademy.main.model.Model
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import kotlinx.android.synthetic.main.activity_look_up.*
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), MainContract.View {
+class MainActivity : AppCompatActivity(), MainContract.View,HotlineContract.View {
 
     private val presenter: MainContract.Presenter = MainPresenter(Model(), this)
+    private val hotlinePresenter : HotlineContract.Presenter = HotlinePresenter(HotlineModel(), this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +31,8 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         presenter.getData(this)
         presenter.aboutDialogCall(this)
         presenter.lookupIntent(this)
+        hotlinePresenter.getData()
+        hotlinePresenter.bottomSheetOpener(this)
     }
 
     override fun updateData(data: MainActivityData) {
@@ -32,9 +45,36 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         }
     }
 
+    override fun updateData(data: MutableList<HotlineData>) {
+        runOnUiThread(){
+            val hotlineAdapter = HotlineAdapter(data)
+
+            rv_main_hotline.layoutManager = LinearLayoutManager(this)
+            rv_main_hotline.adapter = hotlineAdapter
+        }
+    }
+
     override fun showError(error: String) {
         runOnUiThread(){
             Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun closeBottomSheet() {
+        val bottomSheet = findViewById<View>(R.id.cl_bottom_sheet)
+        val bottomSheetBehavior : BottomSheetBehavior<View> = BottomSheetBehavior.from(bottomSheet)
+        val viewBg = findViewById<View>(R.id.bg)
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED;
+        viewBg.visibility = View.INVISIBLE
+    }
+
+    override fun changeBackgroundToRectangle(set: Boolean) {
+        val bottomSheet = findViewById<View>(R.id.cl_bottom_sheet)
+        if(set == true){
+            bottomSheet.background = ContextCompat.getDrawable(applicationContext, R.drawable.rectangle)
+        }
+        else {
+            bottomSheet.background = ContextCompat.getDrawable(applicationContext, R.drawable.top_rounded)
         }
     }
 

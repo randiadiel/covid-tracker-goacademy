@@ -1,7 +1,13 @@
 package com.example.covidtrackergoacademy.hotline.presenter
 
+import android.app.Activity
+import android.view.View
+import androidx.core.content.ContextCompat
+import com.example.covidtrackergoacademy.R
 import com.example.covidtrackergoacademy.hotline.data.HotlineData
 import com.example.covidtrackergoacademy.hotline.model.HotlineModel
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.Response
@@ -37,6 +43,37 @@ class HotlinePresenter(private val model: HotlineModel, private val view: Hotlin
             }
 
         })
+    }
+
+    override fun bottomSheetOpener(context: Activity) {
+        context.cl_main_hotline.setOnClickListener{
+            val bottomSheet = context.findViewById<View>(R.id.cl_bottom_sheet)
+            val bottomSheetBehavior : BottomSheetBehavior<View> = BottomSheetBehavior.from(bottomSheet)
+            val viewBg = context.findViewById<View>(R.id.bg)
+            bottomSheetBehavior.addBottomSheetCallback(getBottomSheetCallback())
+            if(bottomSheetBehavior.state == BottomSheetBehavior.STATE_COLLAPSED){
+                bottomSheetBehavior.state = BottomSheetBehavior.STATE_HALF_EXPANDED;
+                viewBg.visibility = View.VISIBLE
+            }else{
+                view.closeBottomSheet()
+            }
+            viewBg.setOnClickListener() {
+                view.closeBottomSheet()
+            }
+        }
+    }
+
+    private fun getBottomSheetCallback() : BottomSheetBehavior.BottomSheetCallback {
+        return object : BottomSheetBehavior.BottomSheetCallback() {
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+            }
+
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+                if (slideOffset == 0f) view.closeBottomSheet()
+                else if (slideOffset == 1f) view.changeBackgroundToRectangle(true)
+                else view.changeBackgroundToRectangle(false)
+            }
+        }
     }
 
 }
