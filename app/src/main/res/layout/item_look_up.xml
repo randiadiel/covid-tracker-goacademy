@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/karla_regular"
-                android:text="Positive"
+                android:text="@string/positive"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -83,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/karla_regular"
-                android:text="Recovered"
+                android:text="@string/recovered"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/karla_regular"
-                android:text="Death"
+                android:text="@string/death"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 

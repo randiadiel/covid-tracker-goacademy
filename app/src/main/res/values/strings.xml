@@ -19,4 +19,14 @@
     <string name="information">Information</string>
     <string name="red_covid">Red Covid</string>
     <string name="right_arrow">Right Arrow</string>
+    <string name="hotline_title">Hotline</string>
+    <string name="hotline_desc">Layanan darurat via telefon yang disediakan oleh Kementrian Kesehatan Republik Indonesia dan juga Pemprov DKI Jakarta.</string>
+    <string name="image_provinsi">Image Provinsi</string>
+    <string name="positive">Positive</string>
+    <string name="recovered">Recovered</string>
+    <string name="death">Death</string>
+    <string name="search_logo">Search Logo</string>
+    <string name="search_province">Search province...</string>
+    <string name="search_cancel">Cancel Search Button</string>
+    <string name="back_button">Back Button</string>
 </resources>
