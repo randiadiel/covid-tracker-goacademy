@@ -1,4 +1,4 @@
-package com.example.covidtrackergoacademy
+package com.example.covidtrackergoacademy.main.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,18 +6,17 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.covidtrackergoacademy.R
 import com.example.covidtrackergoacademy.hotline.adapter.HotlineAdapter
 import com.example.covidtrackergoacademy.hotline.data.HotlineData
 import com.example.covidtrackergoacademy.hotline.model.HotlineModel
 import com.example.covidtrackergoacademy.hotline.presenter.HotlineContract
 import com.example.covidtrackergoacademy.hotline.presenter.HotlinePresenter
-import com.example.covidtrackergoacademy.lookup.adapter.LookUpAdapter
 import com.example.covidtrackergoacademy.main.data.MainActivityData
 import com.example.covidtrackergoacademy.main.presenter.MainContract
 import com.example.covidtrackergoacademy.main.presenter.MainPresenter
 import com.example.covidtrackergoacademy.main.model.Model
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import kotlinx.android.synthetic.main.activity_look_up.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainContract.View,HotlineContract.View {
@@ -71,10 +70,14 @@ class MainActivity : AppCompatActivity(), MainContract.View,HotlineContract.View
     override fun changeBackgroundToRectangle(set: Boolean) {
         val bottomSheet = findViewById<View>(R.id.cl_bottom_sheet)
         if(set == true){
-            bottomSheet.background = ContextCompat.getDrawable(applicationContext, R.drawable.rectangle)
+            bottomSheet.background = ContextCompat.getDrawable(applicationContext,
+                R.drawable.rectangle
+            )
         }
         else {
-            bottomSheet.background = ContextCompat.getDrawable(applicationContext, R.drawable.top_rounded)
+            bottomSheet.background = ContextCompat.getDrawable(applicationContext,
+                R.drawable.top_rounded
+            )
         }
     }
 
