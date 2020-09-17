@@ -63,6 +63,12 @@ class HotlinePresenter(private val model: HotlineModel, private val view: Hotlin
         }
     }
 
+    override fun closeButton(context: Activity) {
+        context.btn_main_hotline_cancel.setOnClickListener{
+            view.closeBottomSheet()
+        }
+    }
+
     private fun getBottomSheetCallback() : BottomSheetBehavior.BottomSheetCallback {
         return object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onStateChanged(bottomSheet: View, newState: Int) {

@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity(), MainContract.View,HotlineContract.View
         presenter.aboutDialogCall(this)
         presenter.lookupIntent(this)
         hotlinePresenter.getData()
+        hotlinePresenter.closeButton(this)
         hotlinePresenter.bottomSheetOpener(this)
     }
 

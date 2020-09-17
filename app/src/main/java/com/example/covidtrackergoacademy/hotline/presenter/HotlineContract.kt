@@ -13,5 +13,6 @@ interface HotlineContract {
     interface Presenter{
         fun getData()
         fun bottomSheetOpener(context: Activity)
+        fun closeButton(context: Activity)
     }
 }
